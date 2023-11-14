@@ -12,7 +12,7 @@ export interface RootState {
     };
 }
 
-// type EditTodo = Pick<TodoItem, 'id' | 'finished' | 'name'>;//це щоб вибрати які типи потрібно
+// type EditTodo = Pick<TodoItem, 'id' | 'finished' | 'name'>;// to choose only necessary types
 interface EditTodo {
     id?: number| undefined;
     name: string | undefined;
@@ -25,13 +25,12 @@ const EditToDo: React.FC<EditTodo> = ({ id, name, finished }) => {
     const dispatch = useDispatch();
     
     useEffect(() => {
-        // Reset state when new props are received
         setEditedName(name);
         setEditedStatus(finished);
       }, [name, finished]);
     
     const toggleModal = () => {
-        dispatch(todoActions.setEditing({})); //mb treba minyati
+        dispatch(todoActions.setEditing({})); 
     }
     const titleRef = useRef<HTMLInputElement>(null);
     const statusRef = useRef<HTMLSelectElement>(null);
@@ -40,7 +39,7 @@ const EditToDo: React.FC<EditTodo> = ({ id, name, finished }) => {
         dispatch(todoActions.editTodo({
              id, name: titleRef.current?.value || 'Empty',
              finished: statusRef.current?.value || '', }));
-        dispatch(todoActions.setEditing({})); //mb treba minyati
+        dispatch(todoActions.setEditing({})); 
     }
 
     return <>

@@ -10,7 +10,7 @@ import { useSelector } from 'react-redux'
 export interface RootState {
   todo: {
     items: [];
-    filter:'All' | 'Unfinished' | 'Finished'
+    filter: 'All' | 'Unfinished' | 'Finished'
   };
 }
 
@@ -32,8 +32,6 @@ const NewTodo: React.FC = () => {
   }
 
   const toDoesLength = useSelector((state: RootState) => state.todo.items.length);
-  const items = useSelector((state: RootState) => state.todo.items)
-  console.log(items);
   const dispatch = useDispatch();
   const toggleModal = () => {
     dispatch(todoActions.toggleModal());
@@ -43,9 +41,8 @@ const NewTodo: React.FC = () => {
 
   const addTodoHandler = (event: React.FormEvent) => {
     event.preventDefault();
-    console.log(event);
     dispatch(todoActions.addTodo({
-      id: toDoesLength + 1,
+      id: toDoesLength + 2,
       name: titleRef.current?.value || 'Empty',
       finished: statusRef.current?.value || '',
       date: formatDateString(new Date().toISOString())
