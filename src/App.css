@@ -1,0 +1,19 @@
+.header-title {
+  text-align: center;
+}
+
+.main-wrapper {
+  width: 70vh;
+  margin: 0 auto;
+}
+
+.todosWrapper {
+  background-color: #ecedf6;
+  border-radius: 12px;
+  padding:20px;
+  margin-top:10px;
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  gap:10px;
+}

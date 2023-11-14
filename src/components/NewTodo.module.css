@@ -1,0 +1,60 @@
+.backdrop{
+    background: rgba(0,0,0,.5);
+    height: 100%;
+    width:100%;
+    position:fixed;
+    left:0;
+    top:0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.newTodoModal{
+    background-color: #ecedf6;
+    border-radius: 8px;
+    padding:20px;
+    width:90%;
+    max-width: 500px;
+    text-align: center;
+    font-size:20px;
+    position:relative;
+}
+.modalWrapper{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.modalInput,.select{
+    padding:10px;
+    margin-top:5px;
+    font-size:20px;
+    margin-bottom:15px;
+    border:none;
+}
+.modalInput{
+    width:85%;
+}
+.select{
+    width:90%;
+}
+.modalButtons{
+    margin-top:15px;
+    display:flex;
+    gap:10px;
+}
+.closeButton{
+    width:35px;
+    height:35px;
+    background-position: center;
+    background-size: cover;
+    position:absolute;
+    background-color: #ecedf6;
+    top:20px;
+    right:20px;
+    padding:10px;
+}
+.closeButton:hover{
+    background-color: rgb(195, 59, 59);
+}

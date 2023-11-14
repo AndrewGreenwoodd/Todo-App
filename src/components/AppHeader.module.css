@@ -1,0 +1,13 @@
+.headerWrapper{
+    display:flex;
+    justify-content: space-between;
+}
+.headerSelect{
+    background-color: #cccdde;
+    padding:10px;
+    width:150px;
+    font-weight: 600;
+    border-radius: 6px;
+    font-size:15px;
+    text-align: center;
+}

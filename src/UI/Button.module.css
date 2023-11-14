@@ -1,0 +1,15 @@
+.button{
+    padding: 8px 20px;
+    border:none;
+    border-radius: 6px;
+    cursor:pointer;
+    font-size:15px;
+    color:white;
+}
+
+.green{
+    background-color: green;
+}
+.gray{
+    background-color: gray;
+}
